@@ -7,6 +7,7 @@ import { SearchComponent } from './components/search/search.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { MotdBannerComponent } from './components/motd-banner/motd-banner.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     AboutComponent,
     SearchComponent,
     HomeComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    MotdBannerComponent
   ],
   imports: [
     BrowserModule,
