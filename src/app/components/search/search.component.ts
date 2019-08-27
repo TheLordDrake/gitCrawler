@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subject, Observable } from 'rxjs';
+import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { SearchService } from '../../services/search.service';
 import { User } from '../../models/user.model';
@@ -22,9 +22,7 @@ export class SearchComponent implements OnInit, OnDestroy {
       debounceTime(500),
       distinctUntilChanged(),
       switchMap((term: string) => this.searchService.searchUsers(term))
-    ).subscribe(response => {
-      this.user = response;
-    });
+    ).subscribe(response => this.user = response);
   }
 
   ngOnDestroy() {

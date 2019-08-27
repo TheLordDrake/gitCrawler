@@ -1,6 +1,6 @@
 <div>
-  <input #searchBox type="text" id="search-box" placeholder="Search Github..." (input)="search(searchBox.value)">
-  <button type="button" id="btnSearch" (onclick)="search(searchBox.value)">Search</button>
+  <input #searchBox type="text" id="search-box" placeholder="Search Github..." (keyup.enter)="search(searchBox.value)">
+  <button type="button" id="btnSearch" (click)="search(searchBox.value)">Search</button>
 </div>
 <div>
   <app-user-details [model]="user"></app-user-details>
