@@ -1,4 +1,16 @@
 .img-box {
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 275px;
+  max-width: 275px;
+  width: 25%;
+  border-radius: 10px;
+}
+
+.large-txt {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.grayed-txt {
+  color: #666;
+  font-size: large;
 }

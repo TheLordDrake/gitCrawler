@@ -1,5 +1,14 @@
 <div *ngIf="model">
-  <div>Name: {{ model.name }}</div>
-  <div>Email: {{ model.email }}</div>
-  <img class="img-box" src="{{ model.avatarUrl }}">
+  <div>
+    <img class="img-box" src="{{ ( model.avatarUrl ? model.avatarUrl : model.gravatarId ) }}">
+  </div>
+  <div class="large-txt">{{ model.name }}</div>
+  <div class="grayed-txt">{{ model.login }}</div>
+  <div>
+    <i-feather name="mail"></i-feather>Email: {{ model.email }}
+  </div>
+  <div>Location: {{ model.location }} </div>
+  <div>Bio: {{ model.bio }}</div>
+  <div>Company: {{ model.company }}</div>
+  <div>Looking for work: {{ model.hireable }}</div>
 </div>

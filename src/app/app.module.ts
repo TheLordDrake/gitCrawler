@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { MotdBannerComponent } from './components/motd-banner/motd-banner.component';
+import { IconsModule } from './icons/icons.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MotdBannerComponent } from './components/motd-banner/motd-banner.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    IconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
