@@ -7,7 +7,7 @@ import { RawUser } from '../models/raw-user.model';
   providedIn: 'root'
 })
 export class ApiService {
-  private rootUrl = 'http://api.github.com/';
+  private rootUrl = 'https://api.github.com/';
 
   constructor(private http: HttpClient) { }
 
