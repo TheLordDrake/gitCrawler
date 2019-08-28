@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { MotdBannerComponent } from './components/motd-banner/motd-banner.component';
 import { IconsModule } from './icons/icons.module';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IconsModule } from './icons/icons.module';
     SearchComponent,
     HomeComponent,
     UserDetailsComponent,
-    MotdBannerComponent
+    MotdBannerComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
