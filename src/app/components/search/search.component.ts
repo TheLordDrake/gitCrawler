@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit, OnDestroy {
       switchMap((term: string) => this.searchService.searchUsers(term))
     ).subscribe(response => this.user = response);
 
-    if (isDevMode) {
+    if (isDevMode()) {
       this.searchTerms.next('octocat');
     }
   }
