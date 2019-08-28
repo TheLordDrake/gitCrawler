@@ -1,16 +1,26 @@
 <div *ngIf="model">
   <div>
-    <img class="img-box" src="{{ ( model.avatarUrl ? model.avatarUrl : model.gravatarId ) }}">
+    <a href="{{ model.htmlUrl }}">
+      <img class="img-box" src="{{ ( model.avatarUrl ? model.avatarUrl : model.gravatarId ) }}">
+    </a>
   </div>
-  <div class="large-txt">{{ model.name }}</div>
-  <div class="grayed-txt">{{ model.login }}</div>
-  <div>
+  <div class="large-txt">
+    <a href="{{ model.htmlUrl }}">{{ model.name }}
+    </a>
+  </div>
+  <div class="gray-txt">{{ model.login }}</div>
+  <div *ngIf="model.email">
     <app-icon iconName="mail"></app-icon>&nbsp;{{ model.email }}
   </div>
-  <div>
+  <div *ngIf="model.blog">
+    <a href="{{ model.blog }}">
+      <app-icon iconName="link"></app-icon>&nbsp;{{ model.blog }}
+    </a>
+  </div>
+  <div *ngIf="model.location">
     <app-icon iconName="map-pin"></app-icon>&nbsp;{{ model.location }}
   </div>
-  <div>{{ model.bio }}</div>
-  <div>Company: {{ model.company }}</div>
-  <div>Looking for work: {{ model.hireable }}</div>
+  <div *ngIf="model.bio">{{ model.bio }}</div>
+  <div *ngIf="model.company">Company: {{ model.company }}</div>
+  <div *ngIf="model.hireable">Looking for work!</div>
 </div>

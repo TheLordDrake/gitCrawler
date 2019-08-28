@@ -1,3 +1,21 @@
+a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+a:active {
+  color: #000000;
+}
+
 .img-box {
   max-height: 275px;
   max-width: 275px;
@@ -10,7 +28,7 @@
   font-weight: bolder;
 }
 
-.grayed-txt {
+.gray-txt {
   color: #666;
   font-size: large;
 }
