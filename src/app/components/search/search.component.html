@@ -2,6 +2,11 @@
   <div class="search-bar">
     <input #searchBox type="text" id="search-box" placeholder="Search Github..."
       (keyup.enter)="search(searchBox.value)">
+    <select id="search-type">
+      <option *ngFor="let category of searchCategories; let i = index" [value]="searchCategories[i].id">
+        {{searchCategories[i].name}}
+      </option>
+    </select>
     <button type="button" id="btnSearch" (click)="search(searchBox.value)">Search</button>
   </div>
   <div>

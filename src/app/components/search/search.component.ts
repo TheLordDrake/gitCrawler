@@ -11,6 +11,9 @@ import { User } from '../../models/user.model';
 })
 export class SearchComponent implements OnInit, OnDestroy {
   user: User;
+  searchCategories = [
+    { id: '1', name: 'Users' }
+  ];
 
   private onDestroy$ = new Subject<void>();
   private searchTerms = new Subject<string>();
