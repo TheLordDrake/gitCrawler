@@ -8,7 +8,6 @@ import { RawUser } from '../models/raw-user.model';
 })
 export class ApiService {
   private rootUrl = 'https://api.github.com/';
-
   constructor(private http: HttpClient) { }
 
   getRequest(route: string): Observable<RawUser> {
