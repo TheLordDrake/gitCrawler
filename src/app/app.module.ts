@@ -10,6 +10,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { MotdBannerComponent } from './components/motd-banner/motd-banner.component';
 import { IconsModule } from './icons/icons.module';
 import { IconComponent } from './components/icon/icon.component';
+import { SearchResultComponent } from './components/search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { IconComponent } from './components/icon/icon.component';
     HomeComponent,
     UserDetailsComponent,
     MotdBannerComponent,
-    IconComponent
+    IconComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, isDevMode } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, takeUntil } from 'rxjs/operators';
 import { SearchService } from '../../services/search.service';
-import { User } from '../../models/user.model';
+import { SearchResponse } from 'src/app/models/search-response.model';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +10,7 @@ import { User } from '../../models/user.model';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit, OnDestroy {
-  user: User;
+  response: SearchResponse;
   searchCategories = [
     { id: '1', name: 'Users' }
   ];
@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit, OnDestroy {
       debounceTime(500),
       distinctUntilChanged(),
       switchMap((term: string) => this.searchService.searchUsers(term))
-    ).subscribe(response => this.user = response);
+    ).subscribe(response => this.response = response);
 
     if (isDevMode()) {
       this.searchTerms.next('octocat');

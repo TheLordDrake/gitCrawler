@@ -1,4 +1,6 @@
-export interface RawUser {
+import { SearchResponse } from './search-response.model';
+
+export interface RawUser extends SearchResponse {
     login: string;
     id: number;
     node_id: string;
